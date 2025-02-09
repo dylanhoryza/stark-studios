@@ -1,4 +1,5 @@
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid2';
 import StarkPic from '../assets/DSC02309.jpg';
 import Mcdonalds1 from '../assets/mcdonalds1.jpg';
@@ -91,15 +92,17 @@ export default function Home() {
                 textAlign: 'center',
               }}
             >
-              <Button
-                variant='outlined'
-                sx={{
-                  color: 'white',
-                  borderColor: 'white',
-                }}
-              >
-                Photos
-              </Button>
+              <Link to='/photos'>
+                <Button
+                  variant='outlined'
+                  sx={{
+                    color: 'white',
+                    borderColor: 'white',
+                  }}
+                >
+                  Photos
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Grid>
