@@ -46,23 +46,17 @@ export default function Home() {
                 textAlign: 'center',
               }}
             >
-              {/* <Typography
-                  variant='h4'
+              <Link to='/services'>
+                <Button
+                  variant='outlined'
                   sx={{
                     color: 'white',
+                    borderColor: 'white',
                   }}
                 >
                   Services
-                </Typography> */}
-              <Button
-                variant='outlined'
-                sx={{
-                  color: 'white',
-                  borderColor: 'white',
-                }}
-              >
-                Services
-              </Button>
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Grid>
@@ -132,15 +126,17 @@ export default function Home() {
                 textAlign: 'center',
               }}
             >
-              <Button
-                variant='outlined'
-                sx={{
-                  color: 'white',
-                  borderColor: 'white',
-                }}
-              >
-                Videos
-              </Button>
+              <Link to='/videos'>
+                <Button
+                  variant='outlined'
+                  sx={{
+                    color: 'white',
+                    borderColor: 'white',
+                  }}
+                >
+                  Videos
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Grid>
