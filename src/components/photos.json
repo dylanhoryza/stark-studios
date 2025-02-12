@@ -1,0 +1,18 @@
+{
+  "photos": [
+    {
+      "title": "Beach Sunset",
+      "description": "A beautiful sunset at the beach.",
+      "imageSrc": "../assets/6.png",
+      "buttonText": "View Full Size",
+      "link": "/images/full-beach-sunset.jpg"
+    },
+    {
+      "title": "Mountain Landscape",
+      "description": "A serene mountain landscape.",
+      "imageSrc": "../../assets/mcdonalds1.jpg",
+      "buttonText": "View Full Size",
+      "link": "/images/full-mountain-landscape.jpg"
+    }
+  ]
+}
