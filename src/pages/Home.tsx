@@ -46,12 +46,14 @@ export default function Home() {
                 textAlign: 'center',
               }}
             >
-              <Link to='/services'>
+              <Link to='/services' onClick={() => window.scrollTo(0, 0)}>
                 <Button
                   variant='outlined'
                   sx={{
                     color: 'white',
                     borderColor: 'white',
+                    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                    width: 150,
                   }}
                 >
                   Services
@@ -86,12 +88,14 @@ export default function Home() {
                 textAlign: 'center',
               }}
             >
-              <Link to='/photos'>
+              <Link to='/photos' onClick={() => window.scrollTo(0, 0)}>
                 <Button
                   variant='outlined'
                   sx={{
                     color: 'white',
                     borderColor: 'white',
+                    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                    width: 150,
                   }}
                 >
                   Photos
@@ -126,12 +130,14 @@ export default function Home() {
                 textAlign: 'center',
               }}
             >
-              <Link to='/videos'>
+              <Link to='/videos' onClick={() => window.scrollTo(0, 0)}>
                 <Button
                   variant='outlined'
                   sx={{
                     color: 'white',
                     borderColor: 'white',
+                    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                    width: 150,
                   }}
                 >
                   Videos

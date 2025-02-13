@@ -77,9 +77,18 @@ export default function Contact() {
           margin='normal'
           slotProps={{
             input: { style: { color: 'white' } },
-            htmlInput: {
-              disableUnderline: true,
-              style: { borderColor: 'white', color: 'white' },
+          }}
+          sx={{
+            '.MuiOutlinedButton-notchedOutline': {
+              borderColor: 'white',
+            },
+            '.MuiInputLabel-root': {
+              color: 'white',
+            },
+            '.MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#E0E3E7',
+              },
             },
           }}
         />
@@ -94,11 +103,21 @@ export default function Contact() {
           margin='normal'
           slotProps={{
             input: { style: { color: 'white' } },
-            htmlInput: {
-              disableUnderline: true,
-              style: { borderColor: 'white', color: 'white' },
+          }}
+          sx={{
+            '.MuiOutlinedButton-notchedOutline': {
+              borderColor: 'white',
+            },
+            '.MuiInputLabel-root': {
+              color: 'white',
+            },
+            '.MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#E0E3E7',
+              },
             },
           }}
+          
         />
         <TextField
           fullWidth
@@ -107,20 +126,36 @@ export default function Contact() {
           multiline
           rows={8}
           name='message'
+          margin='normal'
           value={message}
           onChange={handleInputChange}
           slotProps={{
             input: { style: { color: 'white' } },
           }}
+          sx={{
+            '.MuiOutlinedButton-notchedOutline': {
+              borderColor: 'white',
+            },
+            '.MuiInputLabel-root': {
+              color: 'white',
+            },
+            '.MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#E0E3E7',
+              },
+            },
+          }}
         />
         <Button
-          variant='contained'
-          color='primary'
+          variant='outlined'
           size='large'
           type='submit'
-          className='contact-submit-btn'
           sx={{
             marginTop: 2,
+            color: 'white',
+            borderColor: 'white',
+            backgroundColor: 'rgba(255, 255, 255, 0.3)',
+            width: 150,
           }}
         >
           Submit

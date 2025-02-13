@@ -70,7 +70,11 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
       >
         <Toolbar>
           <List>
-            <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link
+              to='/'
+              onClick={() => window.scrollTo(0, 0)}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
                   <HomeIcon sx={{ color: 'white' }} />
@@ -81,6 +85,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             <Link
               to='/services'
               style={{ textDecoration: 'none', color: 'inherit' }}
+              onClick={() => window.scrollTo(0, 0)}
             >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
@@ -92,6 +97,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             <Link
               to='/photos'
               style={{ textDecoration: 'none', color: 'inherit' }}
+              onClick={() => window.scrollTo(0, 0)}
             >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
@@ -103,6 +109,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             <Link
               to='/videos'
               style={{ textDecoration: 'none', color: 'inherit' }}
+              onClick={() => window.scrollTo(0, 0)}
             >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
@@ -114,6 +121,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             <Link
               to='/contact'
               style={{ textDecoration: 'none', color: 'inherit' }}
+              onClick={() => window.scrollTo(0, 0)}
             >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
