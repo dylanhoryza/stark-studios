@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { TextField, Button, Snackbar, Typography, Box } from '@mui/material';
 import emailjs from '@emailjs/browser';
 // import { validateEmail } from '../utils/helpers.js'
@@ -10,7 +10,7 @@ export default function Contact() {
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const serviceID = 'service_h1b3wmg';
@@ -39,8 +39,8 @@ export default function Contact() {
       });
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
+  const handleInputChange = (e: React.ChangeEvent) => {
+    const { name, value } = e.target as HTMLInputElement;
     if (name === 'name') setName(value);
     else if (name === 'email') setEmail(value);
     else setMessage(value);
@@ -60,77 +60,72 @@ export default function Contact() {
         variant='h6'
         sx={{
           color: 'white',
-          marginTop: 2
+          marginTop: 2,
         }}
       >
         Contact us below for more information about booking, prices, and
         availability
       </Typography>
-
-      <TextField
-        fullWidth
-        label='Name'
-        variant='outlined'
-        name='name'
-        value={name}
-        onChange={handleInputChange}
-        margin='normal'
-        InputLabelProps={{
-          style: { color: 'white' },
-        }}
-        InputProps={{
-          disableUnderline: true,
-          style: { borderColor: 'white', color: 'white' },
-        }}
-      />
-      <TextField
-        fullWidth
-        label='Email'
-        variant='outlined'
-        type='email'
-        name='email'
-        value={email}
-        onChange={handleInputChange}
-        margin='normal'
-        InputLabelProps={{
-          style: { color: 'white' },
-        }}
-        InputProps={{
-          disableUnderline: true,
-          style: { borderColor: 'white', color: 'white' },
-        }}
-      />
-      <TextField
-        fullWidth
-        label='Message'
-        variant='outlined'
-        multiline
-        rows={8}
-        name='message'
-        value={message}
-        onChange={handleInputChange}
-        margin='normal'
-        InputLabelProps={{
-          style: { color: 'white' },
-        }}
-        InputProps={{
-          disableUnderline: true,
-          style: { borderColor: 'white', color: 'white' },
-        }}
-      />
-      <Button
-        variant='contained'
-        color='primary'
-        size='large'
-        type='submit'
-        onClick={sendEmail}
-        className='contact-submit-btn'
-        sx={{
-          marginTop: 2
-        }}
-      >
-        Submit
-      </Button>
+      <form onSubmit={sendEmail}>
+        <TextField
+          fullWidth
+          label='Name'
+          variant='outlined'
+          name='name'
+          value={name}
+          onChange={handleInputChange}
+          margin='normal'
+          slotProps={{
+            input: { style: { color: 'white' } },
+            htmlInput: {
+              disableUnderline: true,
+              style: { borderColor: 'white', color: 'white' },
+            },
+          }}
+        />
+        <TextField
+          fullWidth
+          label='Email'
+          variant='outlined'
+          type='email'
+          name='email'
+          value={email}
+          onChange={handleInputChange}
+          margin='normal'
+          slotProps={{
+            input: { style: { color: 'white' } },
+            htmlInput: {
+              disableUnderline: true,
+              style: { borderColor: 'white', color: 'white' },
+            },
+          }}
+        />
+        <TextField
+          fullWidth
+          label='Message'
+          variant='outlined'
+          multiline
+          rows={8}
+          name='message'
+          value={message}
+          onChange={handleInputChange}
+          slotProps={{
+            input: { style: { color: 'white' } },
+          }}
+        />
+        <Button
+          variant='contained'
+          color='primary'
+          size='large'
+          type='submit'
+          className='contact-submit-btn'
+          sx={{
+            marginTop: 2,
+          }}
+        >
+          Submit
+        </Button>
+      </form>
       {errorMessage && (
         <Snackbar open={!!errorMessage} autoHideDuration={6000}>
           <div>{errorMessage}</div>
