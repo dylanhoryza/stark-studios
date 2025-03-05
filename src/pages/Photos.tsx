@@ -103,9 +103,9 @@ const photosData = [
 
 export default function PhotosPage() {
   return (
-    <Box sx={{ flexGrow: 1, padding: 4, backgroundColor: 'grey.800' }}>
-      <Typography variant='h4' gutterBottom align='center' color='white' sx={{ marginTop: 8, marginBottom: 6}}>
-        Photos
+    <Box sx={{ flexGrow: 1, padding: 4, backgroundColor: '#008080' }}>
+      <Typography variant='h4' gutterBottom align='center' color='white' sx={{ marginTop: 8, marginBottom: 3, fontWeight: 'bold'}}>
+        PHOTOS
       </Typography>
       <Grid container spacing={4} sx={{ mt: 2 }}>
         {photosData.map((photo, index) => (

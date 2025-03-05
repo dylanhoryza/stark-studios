@@ -1,11 +1,12 @@
 import { Box, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid2';
-import StarkPic from '../assets/DSC02309.jpg';
 import Mcdonalds1 from '../assets/mcdonalds1.jpg';
 import Polar1 from '../assets/polar1.jpg';
 import LilJohn from '../assets/7.jpg';
 import Contact from '../components/Contact';
+import Lion from '../assets/photos/DSC02923-Enhanced-NR.jpg';
+// import StarkLogo from '../assets/STARK-STUDIOS-LOGO.png';
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
         <Grid size={12} sx={{ height: '900px', width: '100%' }}>
           <Box
             sx={{
-              backgroundImage: `url(${StarkPic})`,
+              backgroundImage: `url(${Lion})`,
               backgroundSize: 'cover',
               backgroundPosition: 'top',
               backgroundRepeat: 'no-repeat',
@@ -35,6 +36,7 @@ export default function Home() {
               overflow: 'hidden',
             }}
           >
+            {/* <img src={StarkLogo} style={{ color: 'white', width: '100%' }} /> */}
             <Box
               sx={{
                 position: 'absolute',
@@ -50,10 +52,11 @@ export default function Home() {
                 <Button
                   variant='outlined'
                   sx={{
-                    color: 'white',
-                    borderColor: 'white',
-                    backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                    width: 150,
+                    color: '#008080',
+                    borderColor: '#008080',
+                    backgroundColor: '#E7D4AB',
+                    minWidth: 150,
+                    fontWeight: 'bold',
                   }}
                 >
                   Services
@@ -92,10 +95,11 @@ export default function Home() {
                 <Button
                   variant='outlined'
                   sx={{
-                    color: 'white',
-                    borderColor: 'white',
-                    backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                    width: 150,
+                    color: '#008080',
+                    borderColor: '#008080',
+                    backgroundColor: '#E7D4AB',
+                    minWidth: 150,
+                    fontWeight: 'bold',
                   }}
                 >
                   Photos
@@ -134,10 +138,11 @@ export default function Home() {
                 <Button
                   variant='outlined'
                   sx={{
-                    color: 'white',
-                    borderColor: 'white',
-                    backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                    width: 150,
+                    color: '#008080',
+                    borderColor: '#008080',
+                    backgroundColor: '#E7D4AB',
+                    minWidth: 150,
+                    fontWeight: 'bold',
                   }}
                 >
                   Videos

@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import YouTubeVideo from '../components/YoutubeVideo';
 
 export default function Videos() {
   return (
@@ -6,8 +7,8 @@ export default function Videos() {
       sx={{
         flexGrow: 1,
         padding: 4,
-        backgroundColor: 'grey.800',
-        height: '100dvh',
+        backgroundColor: '#008080',
+        height: 'auto',
       }}
     >
       <Typography
@@ -15,10 +16,17 @@ export default function Videos() {
         gutterBottom
         align='center'
         color='white'
-        sx={{ marginTop: 8, marginBottom: 6 }}
+        fontWeight={'bold'}
+        sx={{ marginTop: 8, marginBottom: 3 }}
       >
-        Videos
+        VIDEOS
       </Typography>
+      <Box sx={{}}>
+        <YouTubeVideo videoId='OwLb5zuuilA' />
+        <YouTubeVideo videoId='nqBctId2-gg' />
+        <YouTubeVideo videoId='Z3nQeO1wxls' />
+        <YouTubeVideo videoId='0cDstjLuge8' />
+      </Box>
     </Box>
   );
 }
