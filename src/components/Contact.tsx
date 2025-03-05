@@ -76,20 +76,21 @@ export default function Contact() {
           onChange={handleInputChange}
           margin='normal'
           slotProps={{
-            input: { style: { color: 'white' } },
+            input: { style: { color: 'black' } },
           }}
           sx={{
             '.MuiOutlinedButton-notchedOutline': {
               borderColor: 'white',
             },
             '.MuiInputLabel-root': {
-              color: 'white',
+              color: '#008080',
             },
             '.MuiOutlinedInput-root': {
               '& fieldset': {
                 borderColor: '#E0E3E7',
               },
             },
+            backgroundColor: '#E7D4AB',
           }}
         />
         <TextField
@@ -102,22 +103,22 @@ export default function Contact() {
           onChange={handleInputChange}
           margin='normal'
           slotProps={{
-            input: { style: { color: 'white' } },
+            input: { style: { color: 'black' } },
           }}
           sx={{
             '.MuiOutlinedButton-notchedOutline': {
-              borderColor: 'white',
+              borderColor: '#E7D4AB',
             },
             '.MuiInputLabel-root': {
-              color: 'white',
+              color: '#008080',
             },
             '.MuiOutlinedInput-root': {
               '& fieldset': {
                 borderColor: '#E0E3E7',
               },
             },
+            backgroundColor: '#E7D4AB',
           }}
-          
         />
         <TextField
           fullWidth
@@ -130,20 +131,21 @@ export default function Contact() {
           value={message}
           onChange={handleInputChange}
           slotProps={{
-            input: { style: { color: 'white' } },
+            input: { style: { color: 'black' } },
           }}
           sx={{
             '.MuiOutlinedButton-notchedOutline': {
               borderColor: 'white',
             },
             '.MuiInputLabel-root': {
-              color: 'white',
+              color: '#008080',
             },
             '.MuiOutlinedInput-root': {
               '& fieldset': {
                 borderColor: '#E0E3E7',
               },
             },
+            backgroundColor: '#E7D4AB',
           }}
         />
         <Button
@@ -152,10 +154,11 @@ export default function Contact() {
           type='submit'
           sx={{
             marginTop: 2,
-            color: 'white',
-            borderColor: 'white',
-            backgroundColor: 'rgba(255, 255, 255, 0.3)',
-            width: 150,
+            color: '#008080',
+            borderColor: '#008080',
+            backgroundColor: '#E7D4AB',
+            minWidth: 150,
+            fontWeight: 'bold'
           }}
         >
           Submit

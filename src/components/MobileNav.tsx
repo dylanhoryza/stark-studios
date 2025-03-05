@@ -7,7 +7,6 @@ import {
   List,
   ListItemIcon,
   ListItemText,
-  Typography,
   ListItemButton,
 } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -17,6 +16,7 @@ import CameraEnhanceIcon from '@mui/icons-material/CameraEnhance';
 import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
 import FeedIcon from '@mui/icons-material/Feed';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import StarkLogo from '../assets/STARK-STUDIOS-LOGO.png';
 
 interface MobileNavProps {
   children?: ReactNode;
@@ -31,7 +31,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
 
   return (
     <>
-      <AppBar position='fixed' sx={{ backgroundColor: 'grey.800' }}>
+      <AppBar position='fixed' sx={{ backgroundColor: '#E7D4AB' }}>
         <Toolbar>
           <IconButton
             edge='start'
@@ -40,15 +40,29 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             onClick={handleDrawerToggle}
             sx={{
               mr: 2,
-              display: { sm: 'block', xs: 'block', lg: 'block', xl: 'block' },
+              display: {
+                sm: 'block',
+                xs: 'block',
+                lg: 'block',
+                xl: 'block',
+                zIndex: 2,
+              },
             }}
           >
-            <MenuIcon sx={{ color: 'white' }} />
+            <MenuIcon sx={{ color: '#008080', zIndex: 10 }} />
           </IconButton>
 
-          <Typography variant='h6' noWrap>
+          {/* <Typography variant='h6' noWrap sx={{ color: '#008080'}}>
             Stark Studios
-          </Typography>
+          </Typography> */}
+          <img
+            src={StarkLogo}
+            style={{ width: '250px', position: 'fixed', top: -99, zIndex: 0 }}
+          />
+          {/* <IconButton></IconButton> */}
+          {/* <Box sx={{ width: '10%'}}>
+          <img src={StarkLogo} style={{ width:'250px'}}/>
+          </Box> */}
         </Toolbar>
       </AppBar>
 
@@ -64,7 +78,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
           '& .MuiDrawer-paper': {
             boxSizing: 'border-box',
             width: 240,
-            backgroundColor: 'grey.800',
+            backgroundColor: '#E7D4AB',
           },
         }}
       >
@@ -77,9 +91,9 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
-                  <HomeIcon sx={{ color: 'white' }} />
+                  <HomeIcon sx={{ color: '#008080' }} />
                 </ListItemIcon>
-                <ListItemText primary='Home' sx={{ color: 'white' }} />
+                <ListItemText primary='Home' sx={{ color: '#008080' }} />
               </ListItemButton>
             </Link>
             <Link
@@ -89,9 +103,9 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
-                  <FeedIcon sx={{ color: 'white' }} />
+                  <FeedIcon sx={{ color: '#008080' }} />
                 </ListItemIcon>
-                <ListItemText primary='Services' sx={{ color: 'white' }} />
+                <ListItemText primary='Services' sx={{ color: '#008080' }} />
               </ListItemButton>
             </Link>
             <Link
@@ -101,9 +115,9 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
-                  <CameraEnhanceIcon sx={{ color: 'white' }} />
+                  <CameraEnhanceIcon sx={{ color: '#008080' }} />
                 </ListItemIcon>
-                <ListItemText primary='Photos' sx={{ color: 'white' }} />
+                <ListItemText primary='Photos' sx={{ color: '#008080' }} />
               </ListItemButton>
             </Link>
             <Link
@@ -113,9 +127,9 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
-                  <VideoCameraBackIcon sx={{ color: 'white' }} />
+                  <VideoCameraBackIcon sx={{ color: '#008080' }} />
                 </ListItemIcon>
-                <ListItemText primary='Videos' sx={{ color: 'white' }} />
+                <ListItemText primary='Videos' sx={{ color: '#008080' }} />
               </ListItemButton>
             </Link>
             <Link
@@ -125,9 +139,9 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
             >
               <ListItemButton onClick={handleDrawerToggle}>
                 <ListItemIcon>
-                  <ContactMailIcon sx={{ color: 'white' }} />
+                  <ContactMailIcon sx={{ color: '#008080' }} />
                 </ListItemIcon>
-                <ListItemText primary='Contact' sx={{ color: 'white' }} />
+                <ListItemText primary='Contact' sx={{ color: '#008080' }} />
               </ListItemButton>
             </Link>
           </List>

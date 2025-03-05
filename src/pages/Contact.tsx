@@ -6,7 +6,7 @@ export default function ContactPage() {
       sx={{
         flexGrow: 1,
         padding: 4,
-        backgroundColor: 'grey.800',
+        backgroundColor: '#008080',
         height: '100dvh',
       }}
     >
@@ -15,9 +15,9 @@ export default function ContactPage() {
         gutterBottom
         align='center'
         color='white'
-        sx={{ marginTop: 8, marginBottom: 6 }}
+        sx={{ marginTop: 8, marginBottom: 3, fontWeight: 'bold' }}
       >
-        Contact
+        CONTACT
       </Typography>
       <Contact />
     </Box>
