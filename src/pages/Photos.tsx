@@ -23,10 +23,20 @@ import Wedding2 from '../assets/photos/DSC06050.jpg';
 import Wedding3 from '../assets/photos/DSC06087.jpg';
 import Wedding4 from '../assets/photos/DSC06361.jpg';
 import Worker from '../assets/photos/DSC06846.jpg';
-import Baby1 from '../assets/photos/DSC07456.jpg';
-import Baby2 from '../assets/photos/DSC07499.jpg';
 
 const photosData = [
+  {
+    imageSrc: `${Mcdonalds1}`,
+  },
+  {
+    imageSrc: `${Mcdonalds2}`,
+  },
+  {
+    imageSrc: `${Mcdonalds3}`,
+  },
+  {
+    imageSrc: `${Mcdonalds4}`,
+  },
   {
     imageSrc: `${LilJohn}`,
   },
@@ -42,12 +52,7 @@ const photosData = [
   {
     imageSrc: `${Trent1}`,
   },
-  {
-    imageSrc: `${Lion}`,
-  },
-  {
-    imageSrc: `${Parrot}`,
-  },
+
   {
     imageSrc: `${Swing}`,
   },
@@ -66,18 +71,7 @@ const photosData = [
   {
     imageSrc: `${Bar4}`,
   },
-  {
-    imageSrc: `${Mcdonalds1}`,
-  },
-  {
-    imageSrc: `${Mcdonalds2}`,
-  },
-  {
-    imageSrc: `${Mcdonalds3}`,
-  },
-  {
-    imageSrc: `${Mcdonalds4}`,
-  },
+
   {
     imageSrc: `${Wedding1}`,
   },
@@ -94,17 +88,23 @@ const photosData = [
     imageSrc: `${Worker}`,
   },
   {
-    imageSrc: `${Baby1}`,
+    imageSrc: `${Lion}`,
   },
   {
-    imageSrc: `${Baby2}`,
+    imageSrc: `${Parrot}`,
   },
 ];
 
 export default function PhotosPage() {
   return (
     <Box sx={{ flexGrow: 1, padding: 4, backgroundColor: '#008080' }}>
-      <Typography variant='h4' gutterBottom align='center' color='white' sx={{ marginTop: 8, marginBottom: 3, fontWeight: 'bold'}}>
+      <Typography
+        variant='h4'
+        gutterBottom
+        align='center'
+        color='white'
+        sx={{ marginTop: 8, marginBottom: 3, fontWeight: 'bold' }}
+      >
         PHOTOS
       </Typography>
       <Grid container spacing={4} sx={{ mt: 2 }}>

@@ -1,4 +1,5 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid2';
 import PhotoCard from '../components/PhotoCard';
 import ServicePhoto from '../assets/6.png';
@@ -58,12 +59,28 @@ export default function Services() {
         management, we help people and brands tell their stories in an
         unforgettable way.
       </Typography>
+      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4}}>
+      <Link to='/contact' onClick={() => window.scrollTo(0, 0)}>
+                <Button
+                  variant='outlined'
+                  sx={{
+                    color: '#008080',
+                    borderColor: '#008080',
+                    backgroundColor: '#E7D4AB',
+                    minWidth: 150,
+                    fontWeight: 'bold',
+                  }}
+                >
+                  Contact
+                </Button>
+              </Link>
+              </Box>
       <Typography
         variant='h4'
         gutterBottom
         align='center'
         color='white'
-        sx={{ marginTop: 8, marginBottom: 3, fontWeight: 'bold' }}
+        sx={{ marginTop: 4, marginBottom: 3, fontWeight: 'bold' }}
       >
         BRANDS THAT TRUST US
       </Typography>

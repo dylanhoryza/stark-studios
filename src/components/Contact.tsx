@@ -49,9 +49,11 @@ export default function Contact() {
   return (
     <Box>
       <Typography
-        variant='h4'
+        variant='h5'
         sx={{
           color: 'white',
+          fontWeight: 'bold',
+          textAlign: 'center'
         }}
       >
         We'd love to hear from you!
@@ -61,6 +63,8 @@ export default function Contact() {
         sx={{
           color: 'white',
           marginTop: 2,
+          textAlign: 'center',
+          mb: 4
         }}
       >
         Contact us below for more information about booking, prices, and
@@ -91,6 +95,7 @@ export default function Contact() {
               },
             },
             backgroundColor: '#E7D4AB',
+           
           }}
         />
         <TextField
