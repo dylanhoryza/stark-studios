@@ -16,7 +16,7 @@ import CameraEnhanceIcon from '@mui/icons-material/CameraEnhance';
 import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
 import FeedIcon from '@mui/icons-material/Feed';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-import StarkLogo from '../assets/STARK-STUDIOS-LOGO.png';
+import StarkLogo from '../assets/STARK-STUDIOS-LOGO-(TEAL).png';
 
 interface MobileNavProps {
   children?: ReactNode;

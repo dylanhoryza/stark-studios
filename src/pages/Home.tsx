@@ -40,10 +40,10 @@ export default function Home() {
             <Box
               sx={{
                 position: 'absolute',
-                // top: 100,
+                top: 500,
                 left: 0,
                 right: 0,
-                bottom: 50,
+                // bottom: 50,
                 padding: 2,
                 textAlign: 'center',
               }}
@@ -83,10 +83,10 @@ export default function Home() {
             <Box
               sx={{
                 position: 'absolute',
-                // top: 100,
+                top: 500,
                 left: 0,
                 right: 0,
-                bottom: 50,
+                // bottom: 50,
                 padding: 2,
                 textAlign: 'center',
               }}
@@ -126,10 +126,10 @@ export default function Home() {
             <Box
               sx={{
                 position: 'absolute',
-                // top: 100,
+                top: 500,
                 left: 0,
                 right: 0,
-                bottom: 50,
+                // bottom: 50,
                 padding: 2,
                 textAlign: 'center',
               }}
