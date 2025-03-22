@@ -57,7 +57,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
           </Typography> */}
           <img
             src={StarkLogo}
-            style={{ width: '250px', position: 'fixed', top: -99, zIndex: 0 }}
+            style={{ width: '250px', position: 'fixed', top: -97, zIndex: 0 }}
           />
           {/* <IconButton></IconButton> */}
           {/* <Box sx={{ width: '10%'}}>
