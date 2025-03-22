@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import Contact from '../components/Contact';
 export default function ContactPage() {
   return (
@@ -10,16 +10,9 @@ export default function ContactPage() {
         height: '100dvh',
       }}
     >
-      <Typography
-        variant='h4'
-        gutterBottom
-        align='center'
-        color='white'
-        sx={{ marginTop: 8, marginBottom: 3, fontWeight: 'bold' }}
-      >
-        CONTACT
-      </Typography>
-      <Contact />
+      <Box sx={{ mt: 8 }}>
+        <Contact />
+      </Box>
     </Box>
   );
 }

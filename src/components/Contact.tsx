@@ -53,7 +53,7 @@ export default function Contact() {
         sx={{
           color: 'white',
           fontWeight: 'bold',
-          textAlign: 'center'
+          textAlign: 'center',
         }}
       >
         We'd love to hear from you!
@@ -64,7 +64,7 @@ export default function Contact() {
           color: 'white',
           marginTop: 2,
           textAlign: 'center',
-          mb: 4
+          mb: 4,
         }}
       >
         Contact us below for more information about booking, prices, and
@@ -88,14 +88,15 @@ export default function Contact() {
             },
             '.MuiInputLabel-root': {
               color: '#008080',
+              borderRadius: '10px',
             },
             '.MuiOutlinedInput-root': {
               '& fieldset': {
                 borderColor: '#E0E3E7',
+                borderRadius: '10px',
+                backgroundColor: '#E7D4AB',
               },
             },
-            backgroundColor: '#E7D4AB',
-           
           }}
         />
         <TextField
@@ -120,9 +121,10 @@ export default function Contact() {
             '.MuiOutlinedInput-root': {
               '& fieldset': {
                 borderColor: '#E0E3E7',
+                borderRadius: '10px',
+                backgroundColor: '#E7D4AB',
               },
             },
-            backgroundColor: '#E7D4AB',
           }}
         />
         <TextField
@@ -148,9 +150,10 @@ export default function Contact() {
             '.MuiOutlinedInput-root': {
               '& fieldset': {
                 borderColor: '#E0E3E7',
+                borderRadius: '10px',
+                backgroundColor: '#E7D4AB',
               },
             },
-            backgroundColor: '#E7D4AB',
           }}
         />
         <Button
@@ -163,7 +166,7 @@ export default function Contact() {
             borderColor: '#008080',
             backgroundColor: '#E7D4AB',
             minWidth: 150,
-            fontWeight: 'bold'
+            fontWeight: 'bold',
           }}
         >
           Submit

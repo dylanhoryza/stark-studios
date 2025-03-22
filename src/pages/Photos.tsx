@@ -22,7 +22,8 @@ import Wedding1 from '../assets/photos/DSC05981.jpg';
 import Wedding2 from '../assets/photos/DSC06050.jpg';
 import Wedding3 from '../assets/photos/DSC06087.jpg';
 import Wedding4 from '../assets/photos/DSC06361.jpg';
-import Worker from '../assets/photos/DSC06846.jpg';
+import Cake from '../assets/photos/unnamed.jpg';
+import Cake2 from '../assets/photos/unnamed (1).jpg';
 
 const photosData = [
   {
@@ -85,7 +86,10 @@ const photosData = [
     imageSrc: `${Wedding4}`,
   },
   {
-    imageSrc: `${Worker}`,
+    imageSrc: `${Cake}`,
+  },
+  {
+    imageSrc: `${Cake2}`,
   },
   {
     imageSrc: `${Lion}`,
