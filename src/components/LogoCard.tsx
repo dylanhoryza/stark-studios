@@ -4,7 +4,7 @@ type PhotoCardProps = {
   imageSrc: string;
 };
 
-const PhotoCard = ({ imageSrc }: PhotoCardProps) => {
+const LogoCard = ({ imageSrc }: PhotoCardProps) => {
   return (
     <Box
       sx={{
@@ -28,11 +28,11 @@ const PhotoCard = ({ imageSrc }: PhotoCardProps) => {
         sx={{
           width: '100%',
           height: '100%',
-          objectFit: 'cover',
+          objectFit: 'contain',
         }}
       />
     </Box>
   );
 };
 
-export default PhotoCard;
+export default LogoCard;

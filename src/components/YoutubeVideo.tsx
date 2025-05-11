@@ -1,24 +1,40 @@
+import { Box } from '@mui/material';
+
 type YouTubeVideoProps = {
   videoId: string;
-}
+};
 
-const YouTubeVideo = ({ videoId, ...props }: YouTubeVideoProps) => {
-  const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+const YouTubeVideo = ({ videoId }: YouTubeVideoProps) => {
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?&modestbranding=1`;
 
   return (
-    <div style={{ marginBottom: 20}}>
+    <Box
+      sx={{
+        position: 'relative',
+        width: '100%',
+        maxWidth: 800, // Limit width on desktop
+        aspectRatio: '1 / 1', // Makes it a square
+        margin: '0 auto 20px', // Center + bottom margin
+        borderRadius: 2,
+        overflow: 'hidden',
+        boxShadow: 3,
+      }}
+    >
       <iframe
-        className="youtube-box-page"
-        width="100%"
-        height="300px"
-        src={`${embedUrl}?&modestbranding=1`}
+        src={embedUrl}
         title="YouTube video player"
-        frameBorder="0"
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          top: 0,
+          left: 0,
+          border: '0',
+        }}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        {...props}
-      ></iframe>
-    </div>
+      />
+    </Box>
   );
 };
 

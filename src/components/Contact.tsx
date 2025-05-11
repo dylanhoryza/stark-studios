@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { TextField, Button, Snackbar, Typography, Box } from '@mui/material';
+import { TextField, Button, Typography, Box, Alert } from '@mui/material';
 import emailjs from '@emailjs/browser';
 // import { validateEmail } from '../utils/helpers.js'
 
@@ -7,8 +7,8 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const [alertMessage, setAlertMessage] = useState(false);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ export default function Contact() {
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: 'Dylan',
+      to_name: 'Trent',
       message: message,
     };
 
@@ -31,11 +31,13 @@ export default function Contact() {
         setName('');
         setEmail('');
         setMessage('');
+        setAlertMessage(true);
         setSuccessMessage('Your message has been submitted!');
       })
       .catch((error) => {
         console.error('Error sending email:', error);
-        setErrorMessage('An error occurred. Please try again.');
+        setAlertMessage(true);
+        setSuccessMessage('An error occurred. Please try again.');
       });
   };
 
@@ -70,118 +72,98 @@ export default function Contact() {
         Contact us below for more information about booking, prices, and
         availability
       </Typography>
-      <form onSubmit={sendEmail}>
-        <TextField
-          fullWidth
-          label='Name'
-          variant='outlined'
-          name='name'
-          value={name}
-          onChange={handleInputChange}
-          margin='normal'
-          slotProps={{
-            input: { style: { color: 'black' } },
-          }}
-          sx={{
-            '.MuiOutlinedButton-notchedOutline': {
-              borderColor: 'white',
-            },
-            '.MuiInputLabel-root': {
+      {alertMessage && <Alert>{successMessage}</Alert>}
+      <Box
+        sx={{
+          maxWidth: 1200,
+          mx: 'auto',
+          px: 2,
+        }}
+      >
+        <form onSubmit={sendEmail}>
+          <TextField
+            fullWidth
+            label='Name'
+            variant='outlined'
+            name='name'
+            value={name}
+            onChange={handleInputChange}
+            margin='normal'
+            slotProps={{
+              input: { style: { color: '#008080' } },
+            }}
+            sx={{
               color: '#008080',
+              backgroundColor: '#E7D4AB',
               borderRadius: '10px',
-            },
-            '.MuiOutlinedInput-root': {
-              '& fieldset': {
-                borderColor: '#E0E3E7',
+              '.MuiInputLabel-root': {
+                color: '#008080',
                 borderRadius: '10px',
-                backgroundColor: '#E7D4AB',
               },
-            },
-          }}
-        />
-        <TextField
-          fullWidth
-          label='Email'
-          variant='outlined'
-          type='email'
-          name='email'
-          value={email}
-          onChange={handleInputChange}
-          margin='normal'
-          slotProps={{
-            input: { style: { color: 'black' } },
-          }}
-          sx={{
-            '.MuiOutlinedButton-notchedOutline': {
-              borderColor: '#E7D4AB',
-            },
-            '.MuiInputLabel-root': {
+            }}
+          />
+          <TextField
+            fullWidth
+            label='Email'
+            variant='outlined'
+            type='email'
+            name='email'
+            value={email}
+            onChange={handleInputChange}
+            margin='normal'
+            slotProps={{
+              input: { style: { color: '#008080' } },
+            }}
+            sx={{
               color: '#008080',
-            },
-            '.MuiOutlinedInput-root': {
-              '& fieldset': {
-                borderColor: '#E0E3E7',
+              backgroundColor: '#E7D4AB',
+              borderRadius: '10px',
+              '.MuiInputLabel-root': {
+                color: '#008080',
                 borderRadius: '10px',
-                backgroundColor: '#E7D4AB',
               },
-            },
-          }}
-        />
-        <TextField
-          fullWidth
-          label='Message'
-          variant='outlined'
-          multiline
-          rows={8}
-          name='message'
-          margin='normal'
-          value={message}
-          onChange={handleInputChange}
-          slotProps={{
-            input: { style: { color: 'black' } },
-          }}
-          sx={{
-            '.MuiOutlinedButton-notchedOutline': {
-              borderColor: 'white',
-            },
-            '.MuiInputLabel-root': {
+            }}
+          />
+          <TextField
+            fullWidth
+            label='Message'
+            variant='outlined'
+            multiline
+            rows={8}
+            name='message'
+            margin='normal'
+            value={message}
+            onChange={handleInputChange}
+            slotProps={{
+              input: { style: { color: '#008080' } },
+            }}
+            sx={{
               color: '#008080',
-            },
-            '.MuiOutlinedInput-root': {
-              '& fieldset': {
-                borderColor: '#E0E3E7',
+              backgroundColor: '#E7D4AB',
+              borderRadius: '10px',
+              '.MuiInputLabel-root': {
+                color: '#008080',
                 borderRadius: '10px',
-                backgroundColor: '#E7D4AB',
               },
-            },
-          }}
-        />
-        <Button
-          variant='outlined'
-          size='large'
-          type='submit'
-          sx={{
-            marginTop: 2,
-            color: '#008080',
-            borderColor: '#008080',
-            backgroundColor: '#E7D4AB',
-            minWidth: 150,
-            fontWeight: 'bold',
-          }}
-        >
-          Submit
-        </Button>
-      </form>
-      {errorMessage && (
-        <Snackbar open={!!errorMessage} autoHideDuration={6000}>
-          <div>{errorMessage}</div>
-        </Snackbar>
-      )}
-      {successMessage && (
-        <Snackbar open={!!successMessage} autoHideDuration={6000}>
-          <div>{successMessage}</div>
-        </Snackbar>
-      )}
+            }}
+          />
+          <Button
+            variant='outlined'
+            size='large'
+            type='submit'
+            sx={{
+              marginTop: 2,
+              color: '#008080',
+              borderColor: '#008080',
+              backgroundColor: '#E7D4AB',
+              minWidth: 150,
+              fontWeight: 'bold',
+            }}
+          >
+            Submit
+          </Button>
+        </form>
+      </Box>
     </Box>
   );
 }

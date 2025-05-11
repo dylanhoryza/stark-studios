@@ -51,18 +51,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
           >
             <MenuIcon sx={{ color: '#008080', zIndex: 10 }} />
           </IconButton>
-
-          {/* <Typography variant='h6' noWrap sx={{ color: '#008080'}}>
-            Stark Studios
-          </Typography> */}
           <img
             src={StarkLogo}
             style={{ width: '250px', position: 'fixed', top: -97, zIndex: 0 }}
           />
-          {/* <IconButton></IconButton> */}
-          {/* <Box sx={{ width: '10%'}}>
-          <img src={StarkLogo} style={{ width:'250px'}}/>
-          </Box> */}
         </Toolbar>
       </AppBar>
 
