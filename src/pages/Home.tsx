@@ -10,47 +10,27 @@ import Lion from '../assets/photos/DSC02923-Enhanced-NR.jpg';
 
 export default function Home() {
   return (
-    <Box sx={{ flexGrow: 1, maxWidth: '100%', padding: 0 }}>
-      <Grid
-        container
-        direction='column'
-        spacing={4}
-        size={12}
-        sx={{
-          '.MuiContainer-root': {
-            padding: '0 !important',
-          },
-        }}
-      >
+    <Box sx={{ flexGrow: 1, width: '100%', padding: 0 }}>
+      <Grid container direction="column" spacing={0}>
         {/* Section 1 */}
-        <Grid size={12} sx={{ height: '900px', width: '100%' }}>
+        <Grid size={{xs: 12}}>
           <Box
             sx={{
               backgroundImage: `url(${Lion})`,
               backgroundSize: 'cover',
               backgroundPosition: 'top',
               backgroundRepeat: 'no-repeat',
+              minHeight: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
               padding: 4,
-              position: 'relative',
-              height: '100%',
-              overflow: 'hidden',
             }}
           >
-            {/* <img src={StarkLogo} style={{ color: 'white', width: '100%' }} /> */}
-            <Box
-              sx={{
-                position: 'absolute',
-                // top: 100,
-                left: 0,
-                right: 0,
-                bottom: 50,
-                padding: 2,
-                textAlign: 'center',
-              }}
-            >
-              <Link to='/services' onClick={() => window.scrollTo(0, 0)}>
+            <Box sx={{ flexGrow: 1 }} />
+            <Box sx={{ textAlign: 'center', pb: 6 }}>
+              <Link to="/services" onClick={() => window.scrollTo(0, 0)}>
                 <Button
-                  variant='outlined'
+                  variant="outlined"
                   sx={{
                     color: '#008080',
                     borderColor: '#008080',
@@ -67,33 +47,24 @@ export default function Home() {
         </Grid>
 
         {/* Section 2 */}
-        <Grid size={12} sx={{ height: '900px' }}>
+        <Grid size={{xs: 12}}>
           <Box
             sx={{
               backgroundImage: `url(${Mcdonalds1})`,
               backgroundSize: 'cover',
               backgroundPosition: 'top',
               backgroundRepeat: 'no-repeat',
+              minHeight: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
               padding: 4,
-              position: 'relative',
-              height: '100%',
-              overflow: 'hidden',
             }}
           >
-            <Box
-              sx={{
-                position: 'absolute',
-                // top: 500,
-                left: 0,
-                right: 0,
-                bottom: 50,
-                padding: 2,
-                textAlign: 'center',
-              }}
-            >
-              <Link to='/photos' onClick={() => window.scrollTo(0, 0)}>
+            <Box sx={{ flexGrow: 1 }} />
+            <Box sx={{ textAlign: 'center', pb: 4 }}>
+              <Link to="/photos" onClick={() => window.scrollTo(0, 0)}>
                 <Button
-                  variant='outlined'
+                  variant="outlined"
                   sx={{
                     color: '#008080',
                     borderColor: '#008080',
@@ -110,33 +81,24 @@ export default function Home() {
         </Grid>
 
         {/* Section 3 */}
-        <Grid size={12} sx={{ height: '900px' }}>
+        <Grid size={{xs: 12}}>
           <Box
             sx={{
               backgroundImage: `url(${Polar1})`,
               backgroundSize: 'cover',
               backgroundPosition: 'top',
               backgroundRepeat: 'no-repeat',
+              minHeight: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
               padding: 4,
-              position: 'relative',
-              height: '100%',
-              overflow: 'hidden',
             }}
           >
-            <Box
-              sx={{
-                position: 'absolute',
-                // top: 500,
-                left: 0,
-                right: 0,
-                bottom: 50,
-                padding: 2,
-                textAlign: 'center',
-              }}
-            >
-              <Link to='/videos' onClick={() => window.scrollTo(0, 0)}>
+            <Box sx={{ flexGrow: 1 }} />
+            <Box sx={{ textAlign: 'center', pb: 4 }}>
+              <Link to="/videos" onClick={() => window.scrollTo(0, 0)}>
                 <Button
-                  variant='outlined'
+                  variant="outlined"
                   sx={{
                     color: '#008080',
                     borderColor: '#008080',
@@ -152,31 +114,20 @@ export default function Home() {
           </Box>
         </Grid>
 
-        {/* Section 4 */}
-        <Grid size={12} sx={{ height: '900px' }}>
+        {/* Section 4 (Contact) */}
+        <Grid size={{xs: 12}}>
           <Box
             sx={{
               backgroundImage: `url(${LilJohn})`,
               backgroundSize: 'cover',
               backgroundPosition: 'top',
               backgroundRepeat: 'no-repeat',
-              padding: 4,
-              position: 'relative',
-              height: '100%',
-              overflow: 'hidden',
+              minHeight: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
-            <Box
-              sx={{
-                position: 'absolute',
-                top: 50,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                padding: 2,
-                textAlign: 'center',
-              }}
-            >
+            <Box sx={{ textAlign: 'center', py: 4 }}>
               <Contact />
             </Box>
           </Box>
