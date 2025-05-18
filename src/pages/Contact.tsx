@@ -20,38 +20,33 @@ export default function ContactPage() {
         <Contact />
       </Box>
 
-      <Stack
-        direction="row"
-        spacing={3}
-        justifyContent="center"
-        sx={{ mb: 2 }}
-      >
+      <Stack direction='row' spacing={3} justifyContent='center' sx={{ mb: 2 }}>
         <IconButton
-          component="a"
-          href="https://www.instagram.com/stvrkstudios"
-          target="_blank"
-          rel="noopener"
+          component='a'
+          href='https://www.instagram.com/stvrkstudios'
+          target='_blank'
+          rel='noopener'
           sx={{ color: '#E7D4AB' }}
         >
-          <InstagramIcon fontSize="large" />
+          <InstagramIcon fontSize='large' />
         </IconButton>
         <IconButton
-          component="a"
-          href="https://www.facebook.com/trent.stark.77"
-          target="_blank"
-          rel="noopener"
+          component='a'
+          href='https://www.facebook.com/trent.stark.77'
+          target='_blank'
+          rel='noopener'
           sx={{ color: '#E7D4AB' }}
         >
-          <FacebookIcon fontSize="large" />
+          <FacebookIcon fontSize='large' />
         </IconButton>
         <IconButton
-          component="a"
-          href="https://www.tiktok.com/@trentstarkmusic"
-          target="_blank"
-          rel="noopener"
+          component='a'
+          href='https://www.tiktok.com/@trentstarkmusic'
+          target='_blank'
+          rel='noopener'
           sx={{ color: '#E7D4AB' }}
         >
-          <TikTokIcon fontSize="large" />
+          <TikTokIcon fontSize='large' />
         </IconButton>
       </Stack>
     </Box>

@@ -8,6 +8,7 @@ import {
   ListItemIcon,
   ListItemText,
   ListItemButton,
+  Box,
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -51,10 +52,27 @@ const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
           >
             <MenuIcon sx={{ color: '#008080', zIndex: 10 }} />
           </IconButton>
-          <img
-            src={StarkLogo}
-            style={{ width: '250px', position: 'fixed', top: -97, zIndex: 0 }}
-          />
+          <Link
+            to='/'
+            style={{
+              position: 'fixed',
+              zIndex: 0,
+              top: undefined,
+            }}
+          >
+            <Box
+              component='img'
+              src={StarkLogo}
+              alt='Stark Logo'
+              sx={{
+                width: { xs: 250, md: 250 },
+                position: 'fixed',
+                top: { xs: -98, md: -95 },
+                left: { xs: 8, md: 16 },
+                zIndex: 0,
+              }}
+            />
+          </Link>
         </Toolbar>
       </AppBar>
 

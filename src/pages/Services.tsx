@@ -2,7 +2,7 @@ import { Box, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid2';
 import LogoCard from '../components/LogoCard';
-import ServicePhoto from '../assets/6.png';
+import ServicePhoto from '../assets/compressed-images/6.jpg';
 import BMW from '../assets/brand-photos/BMW.svg.png';
 import McD1 from '../assets/brand-photos/McDonald.svg.png';
 import McD2 from '../assets/brand-photos/McD 2.svg';
@@ -44,6 +44,7 @@ export default function Services() {
       </Typography>
       <Box
         component='img'
+        loading='lazy'
         src={ServicePhoto}
         alt='Service'
         sx={{
