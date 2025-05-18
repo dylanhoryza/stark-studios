@@ -24,6 +24,7 @@ const PhotoCard = ({ imageSrc }: PhotoCardProps) => {
       <Box
         component='img'
         src={imageSrc}
+        loading='lazy'
         alt='Photo'
         sx={{
           width: '100%',
