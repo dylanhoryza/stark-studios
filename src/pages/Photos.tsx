@@ -24,6 +24,34 @@ import Wedding3 from '../assets/compressed-images/DSC06087.jpg';
 import Wedding4 from '../assets/compressed-images/DSC06361.jpg';
 import Cake from '../assets/compressed-images/unnamed.jpg';
 import Cake2 from '../assets/compressed-images/unnamed (1).jpg';
+import wedding1 from '../assets/compressed-pics/1 (1).jpg';
+import wedding2 from '../assets/compressed-pics/1 (2).jpg';
+import wedding3 from '../assets/compressed-pics/1 (3).jpg';
+import wedding4 from '../assets/compressed-pics/1 (4).jpg';
+import wedding5 from '../assets/compressed-pics/1 (5).jpg';
+import wedding6 from '../assets/compressed-pics/1 (6).jpg';
+import wedding7 from '../assets/compressed-pics/1 (7).jpg';
+import wedding8 from '../assets/compressed-pics/1 (8).jpg';
+import wedding9 from '../assets/compressed-pics/1 (9).jpg';
+import wedding10 from '../assets/compressed-pics/1 (10).jpg';
+import wedding11 from '../assets/compressed-pics/1 (11).jpg';
+import wedding12 from '../assets/compressed-pics/1 (12).jpg';
+import wedding13 from '../assets/compressed-pics/1 (13).jpg';
+import wedding14 from '../assets/compressed-pics/1 (14).jpg';
+import wedding15 from '../assets/compressed-pics/1 (15).jpg';
+import wedding16 from '../assets/compressed-pics/1 (16).jpg';
+import wedding17 from '../assets/compressed-pics/1 (17).jpg';
+import wedding18 from '../assets/compressed-pics/1 (18).jpg';
+import wedding19 from '../assets/compressed-pics/1 (19).jpg';
+import wedding20 from '../assets/compressed-pics/1 (20).jpg';
+import wedding21 from '../assets/compressed-pics/VIVI (1).jpg';
+import wedding22 from '../assets/compressed-pics/VIVI (13).jpg';
+import wedding23 from '../assets/compressed-pics/WEDDING (6).jpg';
+import wedding24 from '../assets/compressed-pics/WEDDING (8).jpg';
+import wedding25 from '../assets/compressed-pics/WEDDING (10).jpg';
+import wedding26 from '../assets/compressed-pics/WEDDING (16).jpg';
+import wedding27 from '../assets/compressed-pics/WEDDING (19).jpg';
+import wedding28 from '../assets/compressed-pics/WEDDING (32).jpg';
 
 const photosData = [
   {
@@ -97,6 +125,34 @@ const photosData = [
   {
     imageSrc: `${Parrot}`,
   },
+  { imageSrc: wedding1 },
+  { imageSrc: wedding2 },
+  { imageSrc: wedding3 },
+  { imageSrc: wedding4 },
+  { imageSrc: wedding5 },
+  { imageSrc: wedding6 },
+  { imageSrc: wedding7 },
+  { imageSrc: wedding8 },
+  { imageSrc: wedding9 },
+  { imageSrc: wedding10 },
+  { imageSrc: wedding11 },
+  { imageSrc: wedding12 },
+  { imageSrc: wedding13 },
+  { imageSrc: wedding14 },
+  { imageSrc: wedding15 },
+  { imageSrc: wedding16 },
+  { imageSrc: wedding17 },
+  { imageSrc: wedding18 },
+  { imageSrc: wedding19 },
+  { imageSrc: wedding20 },
+  { imageSrc: wedding21 },
+  { imageSrc: wedding22 },
+  { imageSrc: wedding23 },
+  { imageSrc: wedding24 },
+  { imageSrc: wedding25 },
+  { imageSrc: wedding26 },
+  { imageSrc: wedding27 },
+  { imageSrc: wedding28 },
 ];
 
 export default function PhotosPage() {
