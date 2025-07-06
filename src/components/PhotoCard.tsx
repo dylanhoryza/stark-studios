@@ -10,7 +10,7 @@ const PhotoCard = ({ imageSrc }: PhotoCardProps) => {
       sx={{
         width: '100%',
         maxWidth: 400,
-        height: 250,
+        height: 500,
         borderRadius: 2,
         overflow: 'hidden',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
@@ -28,7 +28,7 @@ const PhotoCard = ({ imageSrc }: PhotoCardProps) => {
         alt='Photo'
         sx={{
           width: '100%',
-          height: '100%',
+          height: '550px',
           objectFit: 'cover',
         }}
       />

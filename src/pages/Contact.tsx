@@ -10,7 +10,7 @@ export default function ContactPage() {
         flexGrow: 1,
         padding: 2,
         backgroundColor: '#008080',
-        height: '100dvh',
+        minHeight: '100dvh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
