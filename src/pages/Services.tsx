@@ -6,7 +6,6 @@ import ServicePhoto from '../assets/compressed-images/6.jpg';
 import BMW from '../assets/brand-photos/BMW.svg.png';
 import McD1 from '../assets/brand-photos/McDonald.svg.png';
 import McD2 from '../assets/brand-photos/McD 2.svg';
-import Company4 from '../assets/brand-photos/LOGO.png';
 
 const photosData = [
   {
@@ -17,9 +16,6 @@ const photosData = [
   },
   {
     imageSrc: `${McD2}`,
-  },
-  {
-    imageSrc: `${Company4}`,
   },
 ];
 
